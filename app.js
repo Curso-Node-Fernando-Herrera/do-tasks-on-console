@@ -1,11 +1,15 @@
-const { handleMenu, handlePause } = require('./helpers/handleMenu')
+const { handlePause } = require('./helpers/handleMenu')
+const { inquirerMenu } = require('./helpers/inquirerMenu')
 
 const main = async() => {
   let opt = ''
 
   do {
-    opt = await handleMenu()
-  } while(opt !== '0') {
+
+    console.clear()
+    opt = await inquirerMenu()
+
+  } while(opt !== 0) {
     await handlePause()
   }
 }
