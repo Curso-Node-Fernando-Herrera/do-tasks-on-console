@@ -48,7 +48,8 @@ const inquirerMenu = async() => {
   console.log("======== Seleccione una opcion ========".green)
   console.log("=======================================\n".green)
 
-  return { question } = await inquirer.prompt(questions)
+  const { question } = await inquirer.prompt(questions)
+  return question
 }
 
 module.exports = {
